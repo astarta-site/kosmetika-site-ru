@@ -31,12 +31,15 @@ body {
   overflow-y: auto;
 }
 .wrap {
-  height: 64.1%;
+  height: 75.1%;
   width: 100%;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   z-index: 999;
   text-align: center;
 }
@@ -71,31 +74,38 @@ body {
 .test2 {
   position: relative;
   z-index: -1;
-  height: 99.9%;
+  height: 99.95%;
   background: #000;
-  margin: 0 -0.36em;
   display: inline-block !important;
-  transform: translateX(-200px);
+  -webkit-transform: translateX(-300px);
+  -moz-transform: translateX(-300px);
+  -ms-transform: translateX(-300px);
+  -o-transform: translateX(-300px);
+  transform: translateX(-300px);
 }
 .test2 li {
-  width: 95%;
-  margin: 5px 2px 0 -4px;
+  width: 88%;
+  margin: 5px 2px 0 5px;
 }
 .test1 {
   position: relative;
   z-index: -1;
-  height: 99.9%;
+  height: 99.95%;
   background: #000;
-  margin: 0 -0.36em;
   display: inline-block !important;
-  transform: translateX(200px);
+  -webkit-transform: translateX(300px);
+  -moz-transform: translateX(300px);
+  -ms-transform: translateX(300px);
+  -o-transform: translateX(300px);
+  transform: translateX(300px);
 }
 .test1 li {
-  width: 90%;
+  width: 88%;
   margin: 5px 2px 0 5px;
 }
 .before-block {
-  height: 18.1%;
+  height: 12.5%;
+  margin-top: -0.16em;
   background: #000;
   position: absolute;
   top: 0;
@@ -105,7 +115,8 @@ body {
   transform: translate(-50%, 200px);
 }
 .after-block {
-  height: 18.1%;
+  height: 12.5%;
+  margin-bottom: -0.16em;
   background: #000;
   text-align: center;
   vertical-align: middle;
@@ -115,6 +126,18 @@ body {
   z-index: -1;
   display: inline-block !important;
   transform: translate(-50%, -200px);
+}
+.after-block .icon-block {
+  list-style: none;
+  margin: 0 auto;
+  text-align: center !important;
+  float: none !important;
+}
+.after-block .icon-block li {
+  text-align: center !important;
+  float: none !important;
+  display: inline-block;
+  margin-left: 20px;
 }
 .tab-nav {
   margin: 0;
@@ -133,22 +156,57 @@ body {
 .tab-nav li {
   float: left;
   display: block;
-  padding: 5px;
   text-align: left;
+}
+.tab-nav li #carousel_1 {
+  height: 90%;
+  position: relative;
+}
+.tab-nav li #carousel_1 .lefttabs {
+  margin: 8px auto;
+}
+.tab-nav li #carousel_1 .arrow_cont {
+  text-align: center;
+  position: absolute;
+  margin: auto 0;
+  display: block;
+  transform: translateY(50%);
+  z-index: 999;
+}
+.tab-nav li #carousel_1 .arrow_cont.prev {
+  left: 0;
+  top: -21%;
+}
+.tab-nav li #carousel_1 .arrow_cont.next {
+  left: 0;
+  bottom: -13%;
+  transform: rotateX(180deg);
+}
+.tab-nav li #carousel_1 .customer_arrow {
+  width: 85%;
+  -webkit-transition: 0.7s all;
+  -moz-transition: 0.7s all;
+  -ms-transition: 0.7s all;
+  -o-transition: 0.7s all;
+  transition: 0.7s all;
+}
+.tab-nav li #carousel_1 .customer_arrow:hover {
+  opacity: 0.5;
+  color: orange;
 }
 .tab-nav li a {
   font: normal 12px Arial, Helvetica, sans-serif;
   color: white;
   display: block;
   text-decoration: none;
+  padding: 5px;
 }
 .tab-nav li:hover {
   color: white;
   text-decoration: none;
 }
 .tab-nav li .lefttabs {
-  padding: 10px 0 3px 5px;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 .tab-nav li .lefttabs .title {
   font-size: 12px;
@@ -156,6 +214,19 @@ body {
 }
 .tab-nav li .lefttabs span {
   font-size: 9px;
+}
+.tab-nav li .circle {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+.tab-nav li .circle .title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 90px;
+  color: black;
 }
 .tab-nav li .yellow {
   background: #ffd000;
@@ -172,10 +243,16 @@ body {
 .tab-nav li .red {
   background: #c62438;
 }
+.tab-nav li .white {
+  background: white;
+}
 .tab-nav li .news {
   line-height: 2.5;
   padding: 14px 1px 0 5px;
   background: #2a2a2a;
+}
+.after-circle {
+  margin-bottom: 17% !important;
 }
 .tab-nav li.select a {
   color: steelblue;
@@ -192,6 +269,8 @@ body {
 .header-nav {
   list-style: none;
   color: white;
+  display: none;
+  margin-left: 20px;
 }
 .header-nav li {
   display: inline;
@@ -208,25 +287,15 @@ body {
   display: inline-block;
   vertical-align: bottom;
 }
-.dis-none1 {
-  transform: translateX(0);
-  animation: opas1 1s  ;
-}
+.dis-none1,
 .dis-none2 {
   transform: translateX(0);
-  animation: opas2 1s  ;
 }
-.dis-none3 {
-  transform: translate(-50%, 0);
-  position: absolute;
-  z-index: 1;
-  animation: opas3 1s  ;
-}
+.dis-none3,
 .dis-none4 {
   transform: translate(-50%, 0);
   position: absolute;
   z-index: 1;
-  animation: opas4 1s  ;
 }
 .customer-animate2 {
   transition: all 1s;
@@ -235,18 +304,18 @@ body {
   transition: all 1s;
 }
 .block-logo {
-  height: 70%;
+  height: 65%;
   width: auto;
   text-align: center;
   margin: 0 auto;
 }
 .block-logo img {
-  height: 50px;
+  height: 40px;
   width: auto;
   padding: 5px;
 }
 .block-menu {
-  height: 30%;
+  height: 35%;
   width: auto;
   vertical-align: bottom;
 }
@@ -262,22 +331,71 @@ body {
   float: left;
   padding: 15px 15px 15px 0;
 }
+.main-cont ul li {
+  margin-bottom: 20px;
+}
+.circle-li li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.patent-img {
+  height: 100px;
+  width: auto;
+  display: inline-block;
+}
+.patent {
+  display: inline-block;
+}
 .main-title {
   text-align: center;
   font-weight: 800;
+  font-size: 24px;
 }
 .title-desc {
   font-weight: 900;
-  font-size: 15px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.awesome {
+  font-weight: 900;
+  font-size: 18px;
+}
+.partner-img {
+  height: 150px;
+  width: auto;
+  opacity: 0.5;
+}
+.partner-img:hover {
+  opacity: 1;
 }
 .icon-fa {
-  line-height: 25vh;
+  line-height: 13vh;
   font-size: 20px;
   color: white;
   text-align: center;
   display: inline-block;
   margin-left: 3%;
   margin-right: 3%;
+}
+.contact-fa {
+  display: block;
+  color: black;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.contact-fa i {
+  margin-right: 15px;
+}
+.contact-map-icon {
+  margin-left: 24px;
+}
+.contact-map-icon i {
+  margin-right: 17px;
+}
+.title-contact {
+  text-align: center;
+  margin-bottom: 40px;
 }
 @keyframes opas2 {
   0% {
@@ -366,11 +484,11 @@ body {
   width: auto;
 }
 .logo-animate .loader {
-  -webkit-animation: preloader 9s infinite linear reverse;
-  -moz-animation: preloader 9s infinite linear reverse;
-  -ms-animation: preloader 9s infinite linear reverse;
-  -o-animation: preloader 9s infinite linear reverse;
-  animation: preloader 9s infinite linear reverse;
+  -webkit-animation: preloader 9s infinite linear ;
+  -moz-animation: preloader 9s infinite linear ;
+  -ms-animation: preloader 9s infinite linear ;
+  -o-animation: preloader 9s infinite linear ;
+  animation: preloader 9s infinite linear ;
 }
 @-webkit-keyframes preloader {
   to {
@@ -401,15 +519,27 @@ body {
   position: absolute;
   top: 0;
   left: 5%;
+  -webkit-animation-name: spinner;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-direction: reverse;
+  animation-name: spinner;
+  /* указываем на ключевые кадры анимации с названием "spinner" */
+  animation-timing-function: linear;
+  /* функция синхронизации, с помощью которой будут происходить преобразования */
+  animation-iteration-count: infinite;
+  /* количество повторов анимации. "infinite" - значит бесконечно */
+  animation-duration: 6s;
+  /* длительность анимации */
+  animation-direction: reverse;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  /* указываем что это 3D преобразование */
 }
 .logo-animate2 .loader2 {
   height: 100px;
   width: auto;
-}
-.logo-animate2 .loader2 {
-  -webkit-animation: preloader 6s infinite linear reverse;
-  -moz-animation: preloader 6s infinite linear reverse;
-  -ms-animation: preloader 6s infinite linear reverse;
-  -o-animation: preloader 6s infinite linear reverse;
-  animation: preloader 6s infinite linear reverse;
 }
