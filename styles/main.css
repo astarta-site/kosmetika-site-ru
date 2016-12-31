@@ -225,7 +225,7 @@ body {
 .tab-nav li .circle .title {
   font-size: 12px;
   font-weight: 600;
-  line-height: 90px;
+  line-height: 100px;
   color: black;
 }
 .tab-nav li .yellow {
@@ -334,9 +334,57 @@ body {
 .main-cont ul li {
   margin-bottom: 20px;
 }
+.main-cont .tab-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  margin: auto;
+  text-align: center;
+}
+.main-cont .tab-nav li {
+  display: block;
+  float: none;
+  text-align: center;
+  margin: 10px auto;
+}
+.main-cont .tab-nav li .product {
+  padding: 15px 60px;
+  background: rgba(100, 100, 200, 0.63);
+}
+.main-cont .tab-nav li .product:hover {
+  background: #6464c8;
+}
+.circle-li {
+  list-style: none;
+  display: block;
+  text-align: center;
+}
 .circle-li li {
   margin-bottom: 15px;
-  padding-bottom: 15px;
+  margin-left: 15px;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+.circle-li li img {
+  width: auto;
+  height: 100px;
+  transform: scale(0.8);
+  transition: all 0.4s;
+}
+.circle-li li .PartnerLink {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.circle-li li .PartnerLink:hover {
+  text-decoration: none;
+}
+.circle-li li .PartnerLink:hover img {
+  transform: scale(1);
 }
 .patent-img {
   height: 100px;
@@ -542,4 +590,66 @@ body {
 .logo-animate2 .loader2 {
   height: 100px;
   width: auto;
+}
+.consultation {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: black;
+}
+.bolotov {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: black;
+}
+.bolotov-desc {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: black;
+}
+.view-source a {
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.ProductElement {
+  color: black !important;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.ProductElement img {
+  width: auto;
+  height: 120px;
+}
+.ProductElement p {
+  color: #000;
+}
+.ProductImg {
+  width: auto;
+  height: 200px;
+  float: left;
+  padding: 30px 15px 10px 15px;
+}
+.Coments {
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.Coments .ComentsName {
+  color: black;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.Coments .Coment {
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  line-height: 1.4;
 }
